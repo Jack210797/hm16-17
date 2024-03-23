@@ -19,7 +19,12 @@ body {
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 3.75rem;
+  letter-spacing: 0.1em;
+  font-family: $font-header;
+  color: $color-white;
+  font-weight: 300;
+  text-align: center;
 }
 
 h2 {
