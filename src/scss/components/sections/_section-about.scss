@@ -1,0 +1,57 @@
+@import '../../mixins';
+@import '../../presets';
+
+.section-about {
+  background-color: $color-gray-light;
+
+   &__container {
+    @extend %container;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: $gap-x5;
+   }
+
+   &__title {
+    font-size: 2.5rem;
+    letter-spacing: 0.25em;
+    line-height: 3rem;
+    color: $color-primary;
+    font-weight: 700;
+    font-family: $font-header;
+    padding-top: $gap-x5;
+    padding-bottom: 50.03px;
+    margin: 0;
+   }
+
+  &__text {
+    padding-bottom: 87.5px;
+    font-size: 1.125rem;
+    letter-spacing: 0.055em;
+    line-height: 1.5em;
+    color: $color-gray;
+    font-family: $font-main;
+  }
+
+  &__text p:first-of-type {
+    margin-top: 0;
+  }
+
+  &__text p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &__text p:first-of-type::after {
+    border: 1px solid $color-border;
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 200px;
+    content: "";
+    background-color: $color-border;
+
+    @include lg-min {
+      right: -50px;
+    }
+  }
+}
