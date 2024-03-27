@@ -10,6 +10,8 @@
     background-color: $color-primary ;
     height: 100%;
     transition: transform 0.3s;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   &__title {
@@ -37,7 +39,7 @@
     padding: $gap;
     transition: color 0.3s;
   }
-  
+
   &__overlay {
     @include abs-position;
     background-color: rgba($color-primary, 0.8);

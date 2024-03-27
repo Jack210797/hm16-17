@@ -1,2 +1,99 @@
 @import '../../mixins';
 @import '../../presets';
+
+.section-posts {
+
+  &__container {
+    @extend %container;
+    display: grid;
+    gap: $gap;
+    padding-top: 54px;
+    grid-template-areas: "a1 a1 a2 a3" "a4 a5 a6 a6";
+    grid-template-columns: repeat(4, 1fr);
+    }
+
+  &__title {
+    @extend %container;
+    padding-top: $gap-x5;
+    line-height: 0;
+  }
+}
+
+.posts-item {
+  background-color: $color-gray-gray;
+  transition: transform 0.5s;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+  background-color:#d7d7d7 ;
+  }
+
+  &__image {
+    height: 300px;
+  }
+
+
+  &__link {
+    color: $color-gray;
+  }
+
+  &__content {
+    padding: $gap;
+    min-height: 250px;
+    display: grid;
+    align-content: center;
+    gap: $gap;
+  }
+
+  &__title {
+    align-content: center;
+    margin: 0;
+    transition: transform 0.5s
+  }
+
+  &__title:hover {
+    color: $color-gray-dark;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.25em;
+    color: $color-gray;
+    font-weight: 400;
+    font-family: $font-main;
+    text-align: center;
+  }
+}
+
+.posts-item:nth-of-type(1) {
+  grid-area: a1;
+}
+
+.posts-item:nth-of-type(2) {
+  grid-area: a2;
+}
+
+.posts-item:nth-of-type(3) {
+  grid-area: a3;
+}
+
+.posts-item:nth-of-type(4) {
+  grid-area: a4;
+}
+
+.posts-item:nth-of-type(5) {
+  grid-area: a5;
+}
+
+.posts-item:nth-of-type(6) {
+  grid-area: a6;
+}
+
+.posts__actions {
+  display: flex;
+  justify-content: center;
+  padding-top: $gap;
+  padding-bottom: $gap-x5;
+}

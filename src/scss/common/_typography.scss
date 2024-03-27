@@ -28,14 +28,26 @@ h1 {
 }
 
 h2 {
-
+  font-family: $font-header;
+  font-size: 2.5rem;
+  letter-spacing: 0.25em;
+  line-height: 3em;
+  font-weight: 700;
+  color:rgba(45, 54, 81, 1);
 }
 
 h3 {
-
+  font-size: 1.125rem;
+  letter-spacing: 0.06em;
+  line-height: 1.25em;
+  color: $color-gray;
+  font-weight: 700;
+  font-family: $font-header;
+  text-align: center;
 }
 
 a {
   color: $color-white;
   text-decoration: none;
 }
+
