@@ -2,9 +2,13 @@
 @use "../../presets" as *;
 
 .footer {
- min-height: 250px;
-  background-color: $color-primary;
+  position: relative;
+
+  min-height: 250px;
+
   text-align: center;
+
+  background-color: $color-primary;
 
   &__container {
     @extend %container;
@@ -14,19 +18,24 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: $gap-x2;
-    padding-bottom: $gap-x3;
-    gap: 14px;
+
+    padding-top: $gap-x3;
+    padding-bottom: 47px;
+
+    gap: $gap;
   }
 
   &__socials::after {
     position: absolute;
-    bottom: -20px;
+    top: 120px;
     left: calc(50% - 37.5px);
+
     width: 75px;
     height: 2px;
+
     content: "";
-    background-color: rgba(255, 255, 255, 0.1);
+
+    border: 2px solid rgba(255, 255, 255, 0.1);
   }
 
   &__image {
@@ -39,17 +48,36 @@
 
   &__copy-title,
   &__copy-accent {
-    font-family: $font-main;
-    font-weight: 100;
-    font-size: 1rem;
-    line-height: 1.25em;
-    letter-spacing: 0.33em;
+    letter-spacing: 0.3em;
+
     color: $color-gray;
+
+    font-family: $font-main;
+    font-size: 1rem;
+    font-weight: 100;
+    line-height: 1.25em;
   }
 
   &__copy-accent {
-    font-weight: 700;
     letter-spacing: 0.05em;
+
     color: $color-white;
+
+    font-weight: 700;
   }
 }
+
+.fab {
+  transition: color 0.5s;
+
+  color: $color-white;
+
+  font-size: 36px;
+
+  &:hover {
+    color: $color-accent;
+  }
+}
+
+
+

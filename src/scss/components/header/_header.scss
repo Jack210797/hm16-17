@@ -4,14 +4,15 @@
 
 .header {
   position: relative;
-  background-color: $color-primary;
-  background-image: url(../../../../assets/images/img-header.png);
-  min-height: 100vh;
-  background-position: center;
-  background-size: cover;
 
   display: grid;
   align-content: center;
 
+  min-height: 100vh;
+
   color: $color-white;
+  background-color: $color-primary;
+  background-image: url(../../../../assets/images/img-header.png);
+  background-position: center;
+  background-size: cover;
 }

@@ -1,36 +1,100 @@
-@import '../../mixins';
-@import '../../presets';
+@import "../../mixins";
+@import "../../presets";
 
 .section-about {
+  position: relative;
+
   background-color: $color-gray-light;
 
-   &__container {
-    @extend %container;
+  &__container {
     display: grid;
-    grid-template-columns: auto 1fr;
     align-items: center;
-    gap: $gap-x5;
-   }
 
-   &__title {
-    font-size: 2.5rem;
-    letter-spacing: 0.25em;
-    line-height: 3rem;
-    color: $color-primary;
-    font-weight: 700;
-    font-family: $font-header;
-    padding-top: $gap-x5;
-    padding-bottom: 50.03px;
+    @extend %container;
+    gap: $gap-x5;
+    grid-template-columns: 1fr 271px;
+    @include md-sm {
+      gap: $gap-x4;
+    }
+    @include sm {
+      gap: 0;
+      grid-template-columns: 1fr;
+    };
+  }
+
+  &__title {
     margin: 0;
-   }
+    padding-bottom: 43px;
+
+    letter-spacing: 0.1em;
+
+    color: $color-primary;
+
+    font-family: $font-header;
+    font-weight: 700;
+
+    @include ul-min {
+      padding-top: $gap-x5;
+
+      line-height: 3rem;
+    }
+    @include ul-lg {
+      padding-top: $gap-x4;
+
+      line-height: 2.5rem;
+    }
+    @include lg-sm {
+      padding-top: $gap-x3;
+      padding-bottom: $gap;
+
+      line-height: 2rem;
+    }
+    @include sm {
+      padding-top: $gap-x3;
+      padding-bottom: $gap;
+
+      text-align: center;
+
+      line-height: 2rem;
+    }
+  }
 
   &__text {
-    padding-bottom: 87.5px;
-    font-size: 1.125rem;
-    letter-spacing: 0.055em;
-    line-height: 1.5em;
+    position: relative;
+
+    padding-bottom: 100px;
+
+    letter-spacing: 0.049em;
+
     color: $color-gray;
+
     font-family: $font-main;
+    line-height: 1.14em;
+
+    @include ul-min {
+      font-size: 1.125rem;
+    }
+    @include md {
+      font-size: 1rem;
+    }
+    @include sm {
+      padding-bottom: $gap;
+    }
+  }
+
+  &__image {
+    display: grid;
+    align-content: center;
+
+    @include sm {
+      margin: $gap auto $gap-x3 auto;
+    }
+    justify-items: center;
+  }
+
+  &__image img {
+    max-width: 100%;
+    max-height: 480px;
   }
 
   &__text p:first-of-type {
@@ -42,16 +106,33 @@
   }
 
   &__text p:first-of-type::after {
-    border: 1px solid $color-border;
     position: absolute;
-    top: 0;
+
     width: 2px;
     height: 200px;
-    content: "";
-    background-color: $color-border;
 
-    @include lg-min {
+    content: "";
+
+    border: 1px solid rgba(99, 117, 136, 0.1);
+    background-color: rgba(99, 117, 136, 0.1);
+
+    @include ul-min {
+      top: 240px;
       right: -50px;
+    }
+    @include ul-lg {
+      top: 210px;
+      right: -40px;
+    }
+    @include lg {
+      top: 150px;
+      right: -40px;
+    }
+    @include md-sm {
+      right: -18.5px;
+    }
+    @include sm {
+      display: none;
     }
   }
 }

@@ -1,5 +1,4 @@
 @use "../presets" as *;
-
 $diff: 0.2px;
 
 /* ul */
@@ -187,6 +186,7 @@ $diff: 0.2px;
 }
 
 /* sm */
+
 @mixin sm-min {
   @media (min-width: $sm) {
     @content;
