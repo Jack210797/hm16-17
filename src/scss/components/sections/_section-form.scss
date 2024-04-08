@@ -39,18 +39,21 @@
     transition: background-color 0.5s, border-color 0.5s;
     letter-spacing: 0.15em;
 
-    color: $color-white;
-    border: 2px solid rgba($color-primary, 0);
-    border-bottom-color: rgba(255, 255, 255, 1);
-    background-color: rgba(255, 255, 255, 0.051);
+    color: rgba($color-white, 0.51);
+    border: 2px solid rgba($color-white, 0);
+    border-bottom-color: rgba($color-white, 0.25);
+    background-color: rgba($color-white, 0.05);
 
     font-size: 1.125rem;
   }
 
   &__input:hover,
-  &__input:focus {
-    border-color: rgba(255, 255, 255, 1);
-    background-color: rgba(255, 255, 255, 0.149);
+  &__input:focus,
+  &__input:active {
+    // border: 2px solid rgba($color-white, 0.25);
+    color: rgba($color-white, 1);
+    border-bottom-color: rgba($color-white, 1);
+    background-color: rgba($color-white, 0.149);
   }
 }
 

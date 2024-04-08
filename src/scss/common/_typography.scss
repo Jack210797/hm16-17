@@ -28,10 +28,10 @@ h1 {
   font-family: $font-header;
   font-weight: 300;
 
-  @include ul-min {
+  @include lg-min {
     font-size: 3.75rem;
   }
-  @include ul-lg {
+  @include lg-md {
     font-size: 2.5rem;
   }
   @include md {
@@ -48,10 +48,10 @@ h2 {
   font-weight: 700;
   line-height: 3em;
 
-  @include ul-min {
+  @include lg-min {
     font-size: 2.5rem;
   }
-  @include ul-md {
+  @include lg-md {
     font-size: 2rem;
   }
   @include md {
