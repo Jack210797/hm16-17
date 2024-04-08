@@ -45,15 +45,16 @@
     background-color: rgba($color-white, 0.05);
 
     font-size: 1.125rem;
-  }
 
-  &__input:hover,
-  &__input:focus,
-  &__input:active {
-    // border: 2px solid rgba($color-white, 0.25);
-    color: rgba($color-white, 1);
-    border-bottom-color: rgba($color-white, 1);
-    background-color: rgba($color-white, 0.149);
+    &:hover,
+    &:focus,
+    &:active {
+      outline: none;
+      border: 2px solid rgba($color-white, 0.25);
+      color: rgba($color-white, 1);
+      border-bottom-color: rgba($color-white, 1);
+      background-color: rgba($color-white, 0.15);
+    }
   }
 }
 
