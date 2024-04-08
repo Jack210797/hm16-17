@@ -17,11 +17,16 @@
   }
 
   &__container {
+    @extend  %container;
+
     display: grid;
     align-items: center;
 
-    @extend  %container;
     gap: $gap;
     grid-template-columns: auto 1fr;
+
+    @include md {
+      justify-items: end;
+    }
   }
 }
